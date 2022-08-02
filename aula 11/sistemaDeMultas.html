@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1>Sistema de Multa por Velocidade</h1>
+    <label for="txtvel">Velocidade do veículo</label>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" id="btn_verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        var limite = 60
+        var textv = window.document.getElementById("txtvel")
+        var resultado = window.document.getElementById("res")
+
+        function verificar() {
+            if (textv.value > limite) {
+                resultado.innerHTML =`<p>Você estava dirigirindo a ${textv.value}Km/h, portanto você foi <strong>multado</strong> por ultrapassar o limite da via que é de ${limite}Km/h</p>`
+            } else {
+                resultado.innerHTML =`<p>Você estava dirigirindo a ${textv.value}Km/h, portanto você esta dentro do limite de ${limite}Km/h que a via permite</p>`
+            }
+            resultado.innerHTML+= `<p>Lembre-se dirija sempre usando cinto de segurança</p>`
+        }
+    </script>
+</body>
+
+</html>

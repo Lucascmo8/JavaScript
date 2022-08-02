@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<style>
+    * {
+        font: normal 25px sans-serif;
+        transition: 3s;
+    }
+    div{
+        display: flex;
+        background-color: rgb(255, 255, 0);
+        color: white;
+        text-shadow: 1px 1px 3px white;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    div.block{
+        display: none;
+    }
+    div.reset {
+        cursor: pointer;
+        display: flex;
+        background-color: rgb(255, 255, 0);
+        color: white;
+        text-shadow: 1px 1px 3px white;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        transition: 2s;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.425);
+    }
+
+    div.clicou {
+        background-color: red;
+        height: 400px;
+        width: 400px;
+        box-shadow: 0px 0px 10px red;
+        font-size: 45px;
+    }
+    div.entrou{
+        background-color: orange;
+        height: 300px;
+        width: 300px;
+        font-size: 35px;
+        box-shadow: 0px 0px 10px orange;
+    }
+</style>
+
+<body>
+    <div id="area" class="reset" onclick="clicar()" onmouseout="sair()">
+        <p>vem cá</p>
+    </div>
+    <div id="area2" class="block">
+        <p>Oi!</p>
+    </div>
+    <a href="../index/index.html">Area principal</a>
+
+    <script>
+        var div_1 = window.document.getElementById("area")
+        var div_2 = window.document.getElementById("area2")
+        var corpo = window.document.body
+        div_1.addEventListener('mouseenter' , entrou)
+        div_1.addEventListener('dblclick' , dbclick)
+        function entrou(){
+            div_1.classList.add("entrou")
+            div_1.innerText = "clica ou sai"
+            corpo.style.backgroundColor = "gray"
+        }
+        function clicar() {
+            div_1.classList.remove("entrou")
+            div_1.classList.add("clicou")
+            div_1.innerText = "clicou..."
+            div_1.classList.add("clicou")
+            corpo.style.backgroundColor = "black"
+        }
+
+        function sair() {
+            div_1.classList.add("reset")
+            div_1.classList.remove("clicou" , "entrou")
+            div_2.classList.add("block")
+            div_1.innerText = "vem cá"
+            corpo.style.backgroundColor = "white"
+        }
+
+        function dbclick() {
+            div_2.classList.remove("block")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.404);
+        
+    }
+    body{
+        background-color: #972D07;
+    }
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        color: #FFE548;
+    }
+    div#container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 3%;
+        max-width:400px;
+        min-height: 350px;
+        background-color: #FF4B3E;
+        padding: 15px;
+        font-size: 1.8em;
+        color: #FFE548;
+        border-radius: 10px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.404);  
+    }
+    input{
+        border: none;
+    border-radius: 5px;
+    height: 2em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    box-shadow:  1px 2px 5px rgba(0, 0, 0, 0.404);
+    text-indent: 10px;
+    text-align: center;
+    text-shadow: none;
+    }
+    strong{
+        text-decoration: underline;
+    }
+    input[type="button"]{
+        color: #e4cb3d;
+        font-weight: bolder;
+    }
+    input:hover{
+        box-shadow: 1px 1px 5px #FFE548;
+    }
+    input:focus{
+        box-shadow: 1px 1px 5px #FFE548;
+        /* border: 0 none; */
+        outline: 0;
+    }
+@media (max-width:600px) {
+    body{
+        background-color: #FF4B3E;
+    }
+    h1{
+        background-color: #972D07;
+        height: 3.3em;
+        padding: 10px;
+    }
+    div#container{
+        box-shadow: none;
+    }
+}
+</style>
+<body>
+    <h1>Sistema de Multa por Velocidade</h1>
+    <div id="container">
+    <label for="txtvel">Velocidade do veículo:</label>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" id="btn_verificar" onclick="verificar()">
+    <div id="res"></div>
+    </div>
+    <script>
+        var limite = 80
+        var textv = window.document.getElementById("txtvel")
+        var resultado = window.document.getElementById("res")
+
+        function verificar() {
+            if (textv.value > limite) {
+                resultado.innerHTML =`<p>Você estava dirigirindo a ${textv.value}Km/h, portanto você foi <strong>multado</strong> por ultrapassar o limite da via que é de ${limite}Km/h.</p>`
+            } else {
+                resultado.innerHTML =`<p>Você estava dirigirindo a ${textv.value}Km/h, portanto você esta dentro do limite de ${limite}Km/h que a via permite,</p>`
+            }
+            resultado.innerHTML+= `<p>Lembre-se dirija sempre usando cinto de segurança.</p>`
+        }
+    </script>
+</body>
+
+</html>

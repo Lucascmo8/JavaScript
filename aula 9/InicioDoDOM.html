@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: black;
+        color: aquamarine;
+        font: normal 20px sans-serif;
+        text-align: center;
+    }
+
+    div {
+        cursor: pointer;
+        display: flex;
+        background-color: palegreen;
+        color: black;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <h1>Inicio do DOM</h1>
+    <p id="res">Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <Div id="quadrado">
+        <p>Clique Aqui</p>
+    </Div>
+    <script>
+        window.document.write(`Olá Mundo <br>`)
+        window.document.write(window.document.URL)
+        var p1 = window.document.getElementById("res")
+        window.document.write(`<br> ${p1.innerText}: 34`)
+        var isso = window.document.getElementById("isso")
+        var corpo = window.document.body
+        var quadrado = window.document.getElementById("quadrado")
+        quadrado.style.color = "blue"
+        p1.style.background = "darkgray"
+        p1.style.fontSize = "32px"
+    </script>
+</body>
+
+</html>

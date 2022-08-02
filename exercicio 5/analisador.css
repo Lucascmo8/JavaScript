@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #001d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+h1{
+    margin-top: 10%;
+    color: #ffc300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+main{
+    background-color: #ffc300;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: #000814;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-top: 10%;
+}
+
+input , select{
+    background-color: #000814;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: #ffc300;
+    text-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+select{
+    width: 170px;
+}
+select::-webkit-scrollbar{
+    width: 10px;
+    background: #ffc300;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+}
+select::-webkit-scrollbar-track{
+    padding: 5px;
+    border-color: blue;
+    border-radius: 5px;
+}
+select::-webkit-scrollbar-thumb{
+    background-color: #001d3d;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+input[type="button"]:hover, input[type="button"]:focus{
+    background-color: #003268;
+    transition: 1.5s;
+    box-shadow:1px 1px 5px #001d3d;
+    outline: none;
+}
+
+select:focus , select:hover , input[type="number"]:hover, input[type="number"]:focus{
+    outline:2px solid #003268;
+    transition: 0.5s;
+}
+
+p#res{
+    font-size: 18px;
+    font-weight: bold;
+}

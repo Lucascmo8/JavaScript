@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Gringo</title>
+</head>
+<style>
+*{
+    font-family: sans-serif;
+    text-align: center;
+    text-shadow: 4px 0px 5px rgba(0, 0, 0, 0.445);
+}
+img{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+div#container{
+    margin: auto;
+    width: 450px;
+    padding: 20px;
+    background-image: linear-gradient(to left, gray,darkgray);
+    font: 20px large;
+    color: black;
+    border-radius: 10px;
+    transition: 0.5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+    text-shadow: 4px 0px 5px rgba(0, 0, 0, 0.445);
+}
+</style>
+<body>
+    <h1>Brasileiro ou Gringo?</h1>
+    <div id="container">
+        <label for="país">Digite o País que você nasceu:</label><br>
+        <input type="text" name="país" id="input_país"><br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div>
+            <p id="res"></p>
+            <section id="imagem"></section>
+        </div>
+    </div>
+    <script>
+        var container = window.document.getElementById("container")
+        var input_pais = window.document.getElementById("input_país")
+        var resposta = window.document.getElementById("res")
+        var imagem = window.document.getElementById("imagem")
+        function verificar(){
+            if(input_pais.value == "Brasil" || input_pais.value == "brasil" ||input_pais.value == "br" || input_pais.value == "BR"){
+                resposta.innerText = `Você naceu no Brasil, portanto você é brasileiro`
+                imagem.innerHTML = `<img src="https://opolo.com.br/wp-content/uploads/2016/06/novoBrasileiro.jpg" alt="imagem brasileiro ou gringo">`
+                container.style.backgroundImage = `linear-gradient(to left, yellow, green)`
+                container.style.color = "blue"
+            }else{
+                resposta.innerText = "Você não nasceu no Brasil , entrão você é gringo"
+                imagem.innerHTML = `<img src="https://gringo.com.vc/wp-content/uploads/2021/09/Gringo@1200x630-1.png" alt="imagem brasileiro ou gringo">`
+                container.style.backgroundImage = `linear-gradient(to left, red, white, blue )`
+                // setTimeout(alert(`Talvez Você tenha digitado errado`),1000)
+            }
+        }
+    </script>
+</body>
+</html>

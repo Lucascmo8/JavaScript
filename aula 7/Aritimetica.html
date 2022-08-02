@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+    }
+
+    p {
+        font-weight: normal;
+        color: blue;
+    }
+</style>
+
+<body>
+    <a href="../index/index.html">Area principal</a>
+    <script>
+        var primeiroNumero = Number(prompt("Digite o primeiro número"))
+        var segundoNumero = Number(prompt("Digite o segundo número"))
+
+        var soma = primeiroNumero + segundoNumero
+
+        if (primeiroNumero >= segundoNumero) {
+            var subtração = primeiroNumero - segundoNumero
+        } else {
+            var subtração = segundoNumero - primeiroNumero
+        };
+
+        var multiplicação = primeiroNumero * segundoNumero;
+
+        var divisão = primeiroNumero / segundoNumero;
+
+        var restoDaDivisão = primeiroNumero % segundoNumero;
+
+        var potência = primeiroNumero ** segundoNumero;
+
+        document.write(`<h1>Os Números ${primeiroNumero} e ${segundoNumero} dão os sequintes ressultados de maneira aritimética<h1> <br>
+        <p>Na soma o resultado é ${soma} <br>
+        Na subtração o resultado é ${subtração}<br> 
+        Na multiplicação o resultado é ${multiplicação}<br> 
+        Na divisão o resultado é ${divisão}<br>
+        O resto da Divisão é ${restoDaDivisão}<br>
+        Na potência o resultado é ${potência}<p>`)
+        //(`Os números  escolhidos foram ${primeiroNumero} e ${segundoNumero}, eles dão os sequintes ressultados aritiméticos.`)
+    </script>
+</body>
+
+</html>

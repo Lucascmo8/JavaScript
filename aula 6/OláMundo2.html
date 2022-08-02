@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá Mundo</title>
+</head>
+<style>
+    body {
+        background-color: #CC2936;
+        font-family: sans-serif;
+    }
+
+    h1 {
+        color: #388697;
+    }
+
+    p {
+        color: #B5FFE1;
+    }
+</style>
+
+<body>
+    <h1>Olá Mundo !</h1>
+    <p> Essa é a 2ª versão do Inicio da Programação com JavaScript</p>
+    <a href="../index/index.html">Area principal</a>
+    <script>
+        alert('Olá! Seja Bem Vindo')
+        var nome = prompt('Qual é o seu nome?')
+
+        function formatarNome(nome) {
+            return nome[0].toUpperCase() + nome.slice(1).toLowerCase();
+        }
+
+        if (nome.length <= 0) {
+            confirm(`Vamos lá!`)
+        } else {
+            confirm(`Vamos lá! ${formatarNome(nome)}.`)
+        }
+    </script>
+</body>
+
+</html>

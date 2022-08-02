@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre seu Nome...</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+</style>
+
+<body>
+    <header><a href="../index/index.html">Area principal</a></header>
+    <script>
+        var nome = prompt(`Qual é o seu Nome?`)
+        document.write(`Olá ${nome}.<br>`)
+        document.write(`Seu nome tem ${nome.replace(" ", "").length} letras. <br>`)
+        document.write(`Seu nome em maiúsculo ${nome.toUpperCase()} letras. <br>`)
+        document.write(`Seu nome em minúsculo ${nome.toLowerCase()} letras. <br>`)
+    </script>
+</body>
+
+</html>

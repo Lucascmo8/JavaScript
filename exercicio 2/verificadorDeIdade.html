@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estiloVerificadorDeIdade.css">
+    <link rel="shortcut icon" href="imagens/wolf.ico" type="image/x-icon">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <h1>Verificação de Idade</h1>
+    <main id="principal">
+        <label for="ano_de_nascimento">Ano de Nascimento:</label><br>
+        <input type="number" name="ano_de_nascimento" id="input_ano" min="0" placeholder="Digite o ano que você nasceu"><br>
+        <label for="generos">Gênero:</label>  
+        <input type="radio" name="generos" id="radio_masc" onclick="homem()"><span>Masculino</span>
+        <input type="radio" name="generos" id="radio_fem" onclick="mulher()"><span>Feminino</span><br>
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="imagem"></div>
+        <p id="res">Por Favor preencha os campos acima</p>
+    </main>
+    &copy; Lucas Costa
+    <script src="scriptVerificadorDeIdade.js"></script>
+</body>
+</html>

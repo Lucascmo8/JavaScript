@@ -1,0 +1,63 @@
+*{
+    /* padding: 0;
+    margin: 0; */
+    font-family: sans-serif;
+    text-align: center;
+    transition: .5s;
+}
+body{
+    line-height: 3em;
+}
+h1{
+    font-size: 2em;
+    font-weight: bolder;
+}
+main{
+    max-width: 650px;
+    max-height: 650px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+    margin: auto;
+    font-size: 1.5em;
+}
+
+input[type="Number"]{
+    max-width: 400px;
+    min-width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+}
+
+input[type="Number"]:hover , input[type="Number"]:focus{
+    color: rgb(122, 72, 80);
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.438);
+    outline: none;
+}
+
+input[type="radio"]:checked{
+    color: yellow;
+}
+
+input[type="button"]{
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+}
+
+input[type="button"]:hover , input[type="button"]:focus{
+    color: black;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.438);
+    outline: none;
+}
+
+img{
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+}
